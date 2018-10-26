@@ -3,3 +3,9 @@ $vw_fontsize: 75;
   @return ($px / $vw_fontsize) * 1rem;
 }
 $bg_color: #00bcd4;
+$datkTextColor: #333;
+@mixin ellipsis(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -17,6 +17,9 @@ export default {
     body {
       //差异化配置
     }
+    #app{
+      margin: 0 auto;
+    }
   }
   $vw_fontsize: 75;
   @function rem($px) {
@@ -31,5 +34,8 @@ export default {
     @media screen and (min-width: 540px) {
       font-size: 108px;
     }
+  }
+  #app{
+    width: rem(375);
   }
 </style>

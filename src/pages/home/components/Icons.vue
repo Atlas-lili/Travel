@@ -83,8 +83,10 @@ export default {
   .icons /deep/ .swiper-container{
     height: 0;
     padding-bottom: 50%;
-    background-color: #eee;
 
+  }
+  .icons{
+    margin-top: rem(8);
   }
   .icon{
     width: 25%;

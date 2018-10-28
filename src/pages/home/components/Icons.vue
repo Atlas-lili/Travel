@@ -18,50 +18,13 @@ export default {
   name: 'Icons',
   data () {
     return {
-      swiperOption: {},
-      iconsList: [{
-        id: '001',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '11111111111111111'
-      }, {
-        id: '002',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '2'
-      }, {
-        id: '003',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '3'
-      }, {
-        id: '004',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '4'
-      }, {
-        id: '005',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '5'
-      }, {
-        id: '006',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '6'
-      }, {
-        id: '007',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '7'
-      }, {
-        id: '008',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '8'
-      }, {
-        id: '009',
-        imgUrl: 'http://s.qunarzz.com/touch_home/imgs/hotel.png',
-        desc: '9'
-      }]
+      swiperOption: {}
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconsList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -70,6 +33,9 @@ export default {
       })
       return pages
     }
+  },
+  props: {
+    list: Array
   },
   components: {
     swiper,

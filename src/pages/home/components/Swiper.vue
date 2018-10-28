@@ -1,8 +1,8 @@
 <template>
   <div class="swiper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption"  v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide v-for="(item,key) in swiperList" :key="key"><img :src="item.imgUrl" class="swiper-img"></swiper-slide>
+      <swiper-slide v-for="(item,key) in list" :key="key"><img :src="item.imgUrl" class="swiper-img"></swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -20,21 +20,16 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
-      },
-      swiperList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/vc/d9/dd/ac/b62d938a8de875f0199cc03bd2.jpg'
-      }, {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/vc/a5/e0/64/c6bd8680fb67247db15df6057b.jpg'
-      }, {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/vc/2f/8e/51/cb4d31b360c836f7d1bbe83c13.jpg'
-      }, {
-        id: '004',
-        imgUrl: 'http://img1.qunarzz.com/vc/c4/af/5c/7b5c474b2d55284477bcc775cc.png'
-      }]
+      }
     }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
+    }
+  },
+  props: {
+    list: Array
   },
   components: {
     swiper,

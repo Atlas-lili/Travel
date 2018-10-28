@@ -2,7 +2,7 @@
   <div class="weekend">
     <div class="weekend-title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="(item,key) in recommendsList" :key="key">
+      <li class="item border-bottom" v-for="(item,key) in list" :key="key">
         <div class="item-img-wraper">
           <img class="item-img" :src="item.imgUrl" :alt="item.title">
         </div>
@@ -19,24 +19,10 @@
 export default {
   name: 'Weekend',
   data () {
-    return {
-      recommendsList: [{
-        id: '001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-        title: '华山',
-        desc: '只有天在上，更无山与齐'
-      }, {
-        id: '002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-        title: '华山',
-        desc: '只有天在上，更无山与齐'
-      }, {
-        id: '003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-        title: '华山',
-        desc: '只有天在上，更无山与齐'
-      }]
-    }
+    return {}
+  },
+  props: {
+    list: Array
   }
 }
 </script>
@@ -48,7 +34,7 @@ export default {
     padding: 0;
   }
   .weekend{
-    margin-top: rem(8);
+    // margin-top: rem(8);
     .weekend-title{
       line-height: rem(32);
       font-size: rem(12);
@@ -60,7 +46,7 @@ export default {
         .item-img-wraper{
           overflow: hidden;
           height: 0;
-          padding-bottom: 62.5%;
+          padding-bottom: 38.1%;
           .item-img{
             width: 100%;
           }

@@ -2,7 +2,7 @@
   <div class="recommend">
     <div class="recommend-title">热门推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="(item,key) in recommendsList" :key="key">
+      <li class="item border-bottom" v-for="(item,key) in list" :key="key">
         <img class="item-img" :src="item.imgUrl" :alt="item.title">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -18,24 +18,10 @@
 export default {
   name: 'Recommend',
   data () {
-    return {
-      recommendsList: [{
-        id: '001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-        title: '华山',
-        desc: '只有天在上，更无山与齐'
-      }, {
-        id: '002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-        title: '华山',
-        desc: '只有天在上，更无山与齐'
-      }, {
-        id: '003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-        title: '华山',
-        desc: '只有天在上，更无山与齐'
-      }]
-    }
+    return {}
+  },
+  props: {
+    list: Array
   }
 }
 </script>

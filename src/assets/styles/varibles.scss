@@ -4,6 +4,7 @@ $vw_fontsize: 75;
 }
 $bg_color: #00bcd4;
 $datkTextColor: #333;
+$header_height: rem(43);
 @mixin ellipsis(){
   overflow: hidden;
   white-space: nowrap;

@@ -13,7 +13,7 @@ export default {
 <style lang="scss">
   @charset "utf-8";
   //mediaQueries定制视口样式
-  @media (min-width: 769px) {
+  @media (min-width: 540px) {
     body {
       //差异化配置
     }

@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
   @charset "utf-8";
+  @import '~styles/varibles';
   //mediaQueries定制视口样式
   @media (min-width: 540px) {
     body {
@@ -20,10 +21,6 @@ export default {
     #app{
       margin: 0 auto;
     }
-  }
-  $vw_fontsize: 75;
-  @function rem($px) {
-    @return ($px / $vw_fontsize) * 1rem;
   }
   $vw_design: 750;
   html{
@@ -36,6 +33,6 @@ export default {
     }
   }
   #app{
-    width: rem(375);
+    width: $vw_width;
   }
 </style>

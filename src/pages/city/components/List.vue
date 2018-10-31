@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
   @import '~styles/varibles';
+
   .border-topbottom,.border-bottom{
     &:before,&:after{
       border-color: #ccc;
@@ -92,6 +93,11 @@ export default {
           padding-left: rem(8);
         }
       }
+    }
+  }
+  @media (min-width: 1000px) {
+    .list{
+      overflow-y: scroll;
     }
   }
 </style>

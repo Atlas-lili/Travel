@@ -7,17 +7,14 @@
       <span class="iconfont">&#xe632;</span><input type="text" placeholder="输入城市/景点/旅游主题">
     </div>
     <router-link to="/city">
-      <div class="header-right">{{city}}<span class="iconfont">&#xe615;</span></div>
+      <div class="header-right">{{this.$store.state.city}}<span class="iconfont">&#xe615;</span></div>
     </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
-  props: {
-    city: String
-  }
+  name: 'Header'
 }
 </script>
 

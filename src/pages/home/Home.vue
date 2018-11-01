@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconsList"></home-icons>
     <home-recommend :list="recommendsList"></home-recommend>
@@ -20,7 +20,6 @@ export default {
   name: 'Home',
   data () {
     return {
-      city: '北京',
       swiperList: [],
       iconsList: [],
       recommendsList: [],
@@ -41,7 +40,6 @@ export default {
         this.recommendsList = resData.recommendList
         this.weekendList = resData.weekendList
       }
-      console.log(res)
     }
   },
   mounted () {

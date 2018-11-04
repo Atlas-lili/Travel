@@ -115,4 +115,9 @@ export default {
       background-color: #fff;
     }
   }
+  @media (min-width: 1000px) {
+    .search-list{
+      overflow-y: scroll;
+    }
+  }
 </style>

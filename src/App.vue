@@ -36,5 +36,6 @@ export default {
   }
   #app{
     width: $vw_width;
+    position: relative;
   }
 </style>

@@ -5,7 +5,7 @@
           :key="item"
           :ref="item"
           @click="handleLetterClick"
-          @touchstart="handleTouchStart"
+          @touchstart.prevent="handleTouchStart"
           @touchmove="handleTouchMove"
           @touchend="handleTouchEnd">{{item}}</li>
     </ul>
@@ -71,6 +71,7 @@ export default {
 <style lang="scss" scoped>
   @import '~styles/varibles';
   .alphabet{
+    z-index: $little;
     display: flex;
     flex-direction: column;
     justify-content: center;

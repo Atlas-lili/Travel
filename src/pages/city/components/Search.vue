@@ -35,7 +35,7 @@ export default {
     if (this.$refs.search) {
       console.log(1)
     }
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.search, {click: true})
   },
   watch: {
     keyword () {
@@ -79,6 +79,8 @@ export default {
 <style lang="scss" scoped>
   @import '~styles/varibles';
   .search-body{
+    z-index: $mest;
+    position: relative;
     overflow: hidden;
     height: rem(36);
     text-align: center;
@@ -99,7 +101,7 @@ export default {
     }
   }
   .search-list{
-    z-index: $little;
+    z-index: $mest;
     overflow: hidden;
     position: absolute;
     top: rem(79);

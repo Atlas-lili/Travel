@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'babel-polyfill'
 import 'styles/normalize.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'

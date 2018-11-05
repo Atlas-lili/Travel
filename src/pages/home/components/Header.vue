@@ -39,6 +39,7 @@ export default {
       float: left;
     }
     &-input{
+      overflow: hidden;
       flex: 1;
       height: rem(31);
       line-height: rem(31);
@@ -53,7 +54,9 @@ export default {
         font-size: rem(20);
       }
       input{
-        width: 90%;
+        position: relative;
+        top: rem(-2);
+        width: 80%;
         height: rem(24);
         line-height: rem(24);
         margin-left: rem(2);

@@ -69,6 +69,7 @@ export default {
     }
   }
   .header-fix{
+    z-index: $little;
     overflow: hidden;
     height: $header_height;
     line-height: $header_height;

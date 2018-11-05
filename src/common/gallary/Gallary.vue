@@ -70,7 +70,6 @@ export default {
       width: 100%;
       height: 0;
       padding-bottom: 100%;
-      background-color: red;
       .swiper-img{
         // width: 100%;
         height: $vw_width;
